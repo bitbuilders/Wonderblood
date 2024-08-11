@@ -1,14 +1,16 @@
 // Copyright pending
 
+
 #include "Bat.h"
 
+#include "BatMovement.h"
 #include "GameFramework/PawnMovementComponent.h"
 
 ABat::ABat()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	Movement = Cast<UPawnMovementComponent>(CreateDefaultSubobject(TEXT("PawnMovement"), UPawnMovementComponent::StaticClass(), MovementClass.Get(), true, false));
+	Movement = CreateDefaultSubobject<UBatMovement>(TEXT("BatMovementComponent"));
 }
 
 void ABat::BeginPlay()

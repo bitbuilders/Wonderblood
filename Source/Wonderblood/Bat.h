@@ -24,8 +24,5 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<UPawnMovementComponent> MovementClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UPawnMovementComponent* Movement;
 };
